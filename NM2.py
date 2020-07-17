@@ -12,7 +12,7 @@ def Permutation(index, N, M):
             result[index] = i
             visited[i] = True
             Permutation(index+1, N, M)
-            visited[i] = False # backtracking
+            visited[i] = False
 
 
 N, M = map(int, input().split())
