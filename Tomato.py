@@ -23,7 +23,6 @@ def bfs():
             for m in range(M):
                 if tomato_map[h][n][m] == 1:
                     q.append([h,n,m,0])
-                    visited[h][n][m] = True
                 elif tomato_map[h][n][m] == 0:
                     green += 1
     if green == 0:
@@ -34,21 +33,19 @@ def bfs():
 
         for dh, dx, dy in [[high+1, n, m], [high-1, n, m], [high, n, m+1], [high, n, m-1], [high, n+1, m], [high, n-1, m]]:
             if 0 <= dh < H and 0 <= dx < N and 0 <= dy < M:
-                if not visited[dh][dx][dy] and tomato_map[dh][dx][dy] == 0:
+                if tomato_map[dh][dx][dy] == 0:
                     tomato_map[dh][dx][dy] = 1
                     green -= 1
                     if green == 0:
                         return time+1
                     else:
                         q.append([dh,dx,dy,time+1])
-                        visited[dh][dx][dy] = True
 
     if green != 0:
         return -1
 
 M, N, H = map(int, input().split())
 tomato_map = [[[-1 for _ in range(M)] for _ in range(N)] for _ in range(H)]
-visited = [[[False for _ in range(M)] for _ in range(N)] for _ in range(H)]
 
 for h in range(H):
     for n in range(N):
