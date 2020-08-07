@@ -1,2 +1,3 @@
 language = "java10"
-run = ""
+run = "java Java/MovePipe.java"
+
