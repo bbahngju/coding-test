@@ -36,7 +36,6 @@ public class CutCake {
         int result = 0;
 
         while(left <= right){
-            System.out.printf("left: %d, right: %d\n", left, right);
             int mid = (left+right)/2;
 
             if(FindMinimum(station, cut, left, right, mid)) {
@@ -64,4 +63,3 @@ public class CutCake {
     }
 
 }
-
