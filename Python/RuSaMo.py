@@ -52,7 +52,6 @@ def dfs(x, idx):
             dfs(i+1, idx+1)
             visited[i] = False
 
-#==========Main===========
 N, P, E = map(int, input().split())
 x = [0 for _ in range(N)]
 y = [0 for _ in range(N)]

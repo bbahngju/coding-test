@@ -39,7 +39,6 @@ def bf(x, y, cnt):
                 ladder[src][dest] = 0
             dest += 1
 
-#================Main====================
 N, M, H = map(int, input().split())
 
 ladder = [[0 for _ in range(N+1)] for _ in range(H+1)]

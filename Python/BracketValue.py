@@ -25,7 +25,6 @@ def check():
         return False
     return True
 
-#===============Main===========================
 brankList = list(sys.stdin.readline().strip())
 stop = False
 
